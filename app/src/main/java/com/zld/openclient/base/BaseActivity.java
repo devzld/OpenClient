@@ -3,7 +3,6 @@ package com.zld.openclient.base;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.zld.openclient.base.annotation.ActivityFragmentInject;
 import com.zld.openclient.common.EventBean;
@@ -17,12 +16,13 @@ import java.lang.reflect.Type;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by lingdong on 2018/1/3.
  */
 
-public abstract class BaseActivity<T extends IBasePresenter> extends AppCompatActivity implements IBaseView {
+public abstract class BaseActivity<T extends IBasePresenter> extends SupportActivity implements IBaseView {
 
     protected int mContentViewId;
     protected boolean mIsOpenEventBus;
